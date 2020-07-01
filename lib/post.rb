@@ -1,5 +1,6 @@
 class Post
-  attr_accessor :title, :author
+  attr_accessor :title
+  attr_reader :author
   @@all = []
   
   def initialize(title)
@@ -14,4 +15,6 @@ class Post
   def self.all
     @@all
   end
+  
+  def author=(author)
 end
