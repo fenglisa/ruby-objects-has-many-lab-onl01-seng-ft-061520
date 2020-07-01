@@ -5,12 +5,12 @@ class Author
     @name = name
   end
   
-  def add_post(posty)
-    posty.author = self
+  def add_post(title)
+    title.author = self
   end
   
   def posts
-    Post.all.select {|posty| posty.author == self}
+    Post.all.select {|title| title.author == self}
   end
   
   def add_post_by_title(title)
